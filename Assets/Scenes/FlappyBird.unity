@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 11095342}
   - component: {fileID: 11095344}
   - component: {fileID: 11095343}
+  - component: {fileID: 1700000101}
   m_Layer: 5
   m_Name: Tab_L
   m_TagString: Untagged
@@ -655,6 +656,7 @@ GameObject:
   - component: {fileID: 396503031}
   - component: {fileID: 396503033}
   - component: {fileID: 396503032}
+  - component: {fileID: 1700000102}
   m_Layer: 5
   m_Name: Tab_R
   m_TagString: Untagged
@@ -1937,6 +1939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826446562}
   - component: {fileID: 1826446561}
+  - component: {fileID: 1826446570}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1959,10 +1962,51 @@ MonoBehaviour:
   pipeTime: 2
   pipeMin: -1
   pipeMax: 1
-  pipePrefab: {fileID: 1638317043685917187, guid: c150d5ff3e451ad4eb9933a8ad8256fb, type: 3}
+  pipePrefabs:
+  - {fileID: 1638317043685917187, guid: c150d5ff3e451ad4eb9933a8ad8256fb, type: 3}
+  - {fileID: 1638317043685917187, guid: 9d2f5b464d6c43139cfc97f2b865239d, type: 3}
+  - {fileID: 1638317043685917187, guid: 198ed30c746e4753b1ebc3b248cd76c0, type: 3}
   ScoreText: {fileID: 1375551839}
   startPanel: {fileID: 1307151332}
   player: {fileID: 1884124936}
+--- !u!114 &1826446570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826446560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f540bbbe64114bd19d5de68dab3d47ae, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  playerRenderer: {fileID: 1884124939}
+  previewImage: {fileID: 202810795}
+  playerAnimator: {fileID: 1884124938}
+  characters:
+  - name: Bird
+    frames:
+    - {fileID: -4277171156180189742, guid: 3262e112d75fc7d44a9474b609c8a5b7, type: 3}
+    - {fileID: 9183450778670918191, guid: 3262e112d75fc7d44a9474b609c8a5b7, type: 3}
+    - {fileID: 5690341998737067906, guid: 3262e112d75fc7d44a9474b609c8a5b7, type: 3}
+  - name: Frog
+    frames:
+    - {fileID: 8499786943840858256, guid: 38ace7ef392e84d39845787eee28013d, type: 3}
+    - {fileID: -2535143633063083783, guid: 1e636120e39384e4b80f4ce64090cbbc, type: 3}
+  - name: Bus
+    frames:
+    - {fileID: -2790947420385760092, guid: 2fddb94084b0a44aa963e4c45db685ce, type: 3}
+    - {fileID: -2766853457565468975, guid: 4a3c1e2777521485dabc9000687141e0, type: 3}
+  - name: Truck
+    frames:
+    - {fileID: 508048506282351895, guid: 66576a2f7998f42e5ba8f6664031d376, type: 3}
+    - {fileID: 2139277204921540226, guid: 74019dc9fce4e49c79837990dde9967c, type: 3}
+  - name: Dog
+    frames:
+    - {fileID: -755093202787023082, guid: b83e72813171942b4adb6215f2b1bee0, type: 3}
+    - {fileID: -2462480495158679074, guid: e68716d391f734a30b76b32420726805, type: 3}
+  frameRate: 12
 --- !u!4 &1826446562
 Transform:
   m_ObjectHideFlags: 0
@@ -2494,3 +2538,113 @@ SceneRoots:
   - {fileID: 1826446562}
   - {fileID: 880697894}
   - {fileID: 1013549497}
+--- !u!114 &1700000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11095341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 11095343}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826446570}
+        m_TargetAssemblyTypeName: CharacterSelect, Assembly-CSharp
+        m_MethodName: Prev
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+        m_CallState: 2
+--- !u!114 &1700000102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396503030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 396503032}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1826446570}
+        m_TargetAssemblyTypeName: CharacterSelect, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+        m_CallState: 2

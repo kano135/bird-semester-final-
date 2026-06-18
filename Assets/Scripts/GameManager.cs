@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public float pipeTime = 2f;     //생성 간격(2초)
     public float pipeMin = -1;      //파이프 최소 생성높이
     public float pipeMax = 1;       //파이프 최대 생성높이
-    public GameObject pipePrefab;   //파이프프리펩 등록
+    public GameObject[] pipePrefabs;   //파이프프리펩 등록 (여러 개 넣으면 랜덤으로 나옴)
 
     static public int score = 0;    //ScoreUpdateDetect에서 직접적으로 점수를 올려줌
     static public int bestScore = 0;
@@ -44,8 +44,11 @@ public class GameManager : MonoBehaviour
     {
         while(!playerDie)
         {
-            Instantiate(pipePrefab,     //무엇을 만들것인가?
-                new Vector3(3.5f, Random.Range(pipeMin, pipeMax), 0),   //어디에 만들것인가? 
+            //인스펙터에 넣어둔 파이프프리펩들 중 하나를 랜덤으로 골라준다.
+            GameObject randomPipe = pipePrefabs[Random.Range(0, pipePrefabs.Length)];
+
+            Instantiate(randomPipe,     //무엇을 만들것인가? (랜덤으로 뽑은 파이프)
+                new Vector3(3.5f, Random.Range(pipeMin, pipeMax), 0),   //어디에 만들것인가?
                 Quaternion.Euler(new Vector3(0,0,0)));  //회전값은 없다
 
             yield return new WaitForSeconds(pipeTime);  //pipeTime 만큼 쉬었다가 다음 반복문으로 넘어간다.
